@@ -3,38 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TikTok 料理レシピ バイラル動画 2026年1〜3月</title>
+<title>SNS 料理レシピ バイラル動画 2026年1〜3月</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', sans-serif; background: #0f0f0f; color: #e8e8e8; line-height: 1.6; }
   .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-  h1 { text-align: center; font-size: 1.6rem; margin: 30px 0 10px; background: linear-gradient(135deg, #fe2c55, #25f4ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .platform-nav { display: flex; justify-content: center; gap: 12px; margin: 20px 0 30px; }
+  .platform-btn { padding: 10px 24px; border-radius: 25px; border: 2px solid #333; background: transparent; color: #888; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+  .platform-btn:hover { border-color: #555; color: #ccc; }
+  .platform-btn.active-tiktok { border-color: #fe2c55; color: #fe2c55; background: rgba(254,44,85,0.1); }
+  .platform-btn.active-ig { border-color: #e1306c; color: #e1306c; background: rgba(225,48,108,0.1); }
+  .section { display: none; }
+  .section.active { display: block; }
+  h1 { text-align: center; font-size: 1.6rem; margin: 30px 0 10px; }
+  .title-tiktok { background: linear-gradient(135deg, #fe2c55, #25f4ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .title-ig { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
   .subtitle { text-align: center; color: #888; font-size: 0.85rem; margin-bottom: 30px; }
-  h2 { font-size: 1.15rem; margin: 30px 0 15px; padding-left: 12px; border-left: 4px solid #fe2c55; }
+  h2 { font-size: 1.15rem; margin: 30px 0 15px; padding-left: 12px; }
+  .tiktok-section h2 { border-left: 4px solid #fe2c55; }
+  .ig-section h2 { border-left: 4px solid #e1306c; }
   table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 0.9rem; }
-  th { background: #1a1a2e; color: #25f4ee; text-align: left; padding: 10px 12px; font-weight: 600; }
+  .tiktok-section th { background: #1a1a2e; color: #25f4ee; }
+  .ig-section th { background: #1a1a2e; color: #e1306c; }
+  th { text-align: left; padding: 10px 12px; font-weight: 600; }
   td { padding: 10px 12px; border-bottom: 1px solid #222; }
   tr:hover td { background: #1a1a1a; }
-  .rank { color: #fe2c55; font-weight: 700; text-align: center; width: 40px; }
+  .rank { font-weight: 700; text-align: center; width: 40px; }
+  .tiktok-section .rank { color: #fe2c55; }
+  .ig-section .rank { color: #e1306c; }
   .recipe-name { font-weight: 600; color: #fff; }
-  .period { color: #25f4ee; font-size: 0.8rem; white-space: nowrap; }
-  .account { color: #fe2c55; font-weight: 600; }
+  .period { font-size: 0.8rem; white-space: nowrap; }
+  .tiktok-section .period { color: #25f4ee; }
+  .ig-section .period { color: #c13584; }
+  .account { font-weight: 600; }
+  .tiktok-section .account { color: #fe2c55; }
+  .ig-section .account { color: #e1306c; }
   .followers { color: #25f4ee; }
+  .ig-section .followers { color: #c13584; }
   .trend-tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 15px 0 30px; }
   .tag { background: #1a1a2e; border: 1px solid #333; border-radius: 20px; padding: 6px 16px; font-size: 0.8rem; }
   .note { background: #1a1a2e; border: 1px solid #333; border-radius: 8px; padding: 16px; margin-top: 20px; font-size: 0.85rem; color: #aaa; }
-  .note strong { color: #fe2c55; }
+  .tiktok-section .note strong { color: #fe2c55; }
+  .ig-section .note strong { color: #e1306c; }
   @media (max-width: 600px) {
     table { font-size: 0.8rem; }
     th, td { padding: 8px 6px; }
     h1 { font-size: 1.3rem; }
+    .platform-btn { padding: 8px 18px; font-size: 0.85rem; }
   }
 </style>
 </head>
 <body>
 <div class="container">
 
-<h1>TikTok 料理レシピ バイラル動画</h1>
+<div class="platform-nav">
+  <button class="platform-btn active-tiktok" onclick="switchTab('tiktok')" id="btn-tiktok">TikTok</button>
+  <button class="platform-btn" onclick="switchTab('ig')" id="btn-ig">Instagram</button>
+</div>
+
+<!-- ==================== TikTok ==================== -->
+<div class="section tiktok-section active" id="section-tiktok">
+
+<h1 class="title-tiktok">TikTok 料理レシピ バイラル動画</h1>
 <p class="subtitle">2026年1月〜3月｜再生回数1万回以上（推定数十万〜数百万回規模）</p>
 
 <h2>バイラルレシピ TOP 10</h2>
@@ -101,9 +131,123 @@
 </div>
 
 <div class="note">
-  <strong>注意:</strong> TikTokは外部APIで再生回数を網羅的に取得できないため、上記はすべて各メディアで「viral / trending」として紹介されたものです。実際の再生回数は数十万〜数百万回規模と推定されます。個別の正確な再生回数はTikTokアプリ内で直接ご確認ください。
+  <strong>注意:</strong> TikTokは外部APIで再生回数を網羅的に取得できないため、上記はすべて各メディアで「viral / trending」として紹介されたものです。実際の再生回数は数十万〜数百万回規模と推定されます。
 </div>
 
 </div>
+
+<!-- ==================== Instagram ==================== -->
+<div class="section ig-section" id="section-ig">
+
+<h1 class="title-ig">Instagram 料理レシピ バイラル投稿</h1>
+<p class="subtitle">2026年1月〜3月｜リール再生・いいね数上位（推定数十万〜数百万回規模）</p>
+
+<h2>バイラルレシピトレンド</h2>
+<table>
+  <thead>
+    <tr><th style="width:40px">#</th><th>レシピ / トレンド</th><th>概要</th><th>時期</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="rank">1</td><td class="recipe-name">Cottage Cheese Wrap</td><td>TikTok発→IGリールでも最大トレンドに。高タンパク・低糖質ラップ</td><td class="period">1〜3月</td></tr>
+    <tr><td class="rank">2</td><td class="recipe-name">ハイプロテイン・コンフォートボウル</td><td>チキンブリトーボウルなど。高タンパク×満足感の丼もの</td><td class="period">2〜3月</td></tr>
+    <tr><td class="rank">3</td><td class="recipe-name">ブロッコリーレシピ各種</td><td>2026年4月の指定野菜化に先駆けてバズ。Tasty Japanが牽引</td><td class="period">2〜3月</td></tr>
+    <tr><td class="rank">4</td><td class="recipe-name">キャベツレシピ再流行</td><td>コスパ×栄養価。回鍋肉・コールスロー・お好み焼き等</td><td class="period">1〜3月</td></tr>
+    <tr><td class="rank">5</td><td class="recipe-name">サーモンライスボウル</td><td>Emily Mariko発祥が定番化。残りサーモン+ごはん+醤油+マヨ</td><td class="period">継続トレンド</td></tr>
+    <tr><td class="rank">6</td><td class="recipe-name">発酵食品レシピ</td><td>キムチ・ピクルス・ヨーグルトソースを使った腸活系料理</td><td class="period">1〜3月</td></tr>
+    <tr><td class="rank">7</td><td class="recipe-name">エアフライヤー料理</td><td>手羽先・豆腐・バナナのトゥロンなど「何でもエアフライ」系</td><td class="period">1〜3月</td></tr>
+    <tr><td class="rank">8</td><td class="recipe-name">甘じょっぱいデザート</td><td>塩キャラメル系・味噌ブラウニーなど甘塩コントラスト</td><td class="period">2〜3月</td></tr>
+    <tr><td class="rank">9</td><td class="recipe-name">ファンクショナルドリンク</td><td>抹茶ラテ・プロテインコーヒー・ゴールデンミルクなどおうちカフェ系</td><td class="period">1〜3月</td></tr>
+    <tr><td class="rank">10</td><td class="recipe-name">餃子の皮アレンジ</td><td>ピザ・ラザニア・キッシュ風など。Tasty Japan等が紹介</td><td class="period">1〜2月</td></tr>
+  </tbody>
+</table>
+
+<h2>日本の人気料理系アカウント</h2>
+<table>
+  <thead>
+    <tr><th>アカウント</th><th>フォロワー</th><th>特徴</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="account">Tasty Japan @tastyjapan</td><td class="followers">約800万人</td><td>BuzzFeed Japan運営。映える時短レシピ動画</td></tr>
+    <tr><td class="account">DELISH KITCHEN @delishkitchen.tv</td><td class="followers">約500万人</td><td>国内最大級レシピメディア。7媒体合計1,000万人超</td></tr>
+    <tr><td class="account">リュウジ @ryuji_foodlabo</td><td class="followers">約225万人</td><td>バズレシピの王道。総フォロワー約1,070万人</td></tr>
+    <tr><td class="account">Mizuki @mizuki_31cafe</td><td class="followers">約100万人</td><td>簡単・時短・節約の3本柱。レシピ本30万部超</td></tr>
+    <tr><td class="account">てづくりごはん365</td><td class="followers">約95万人</td><td>リール総再生5,000万回超。1投稿平均77万再生</td></tr>
+    <tr><td class="account">まるみキッチン @marumi_kitchen</td><td class="followers">約85万人</td><td>「やる気1%レシピ」。レシピ本大賞2年連続受賞</td></tr>
+    <tr><td class="account">栗原はるみ</td><td class="followers">約83万人</td><td>料理研究家の大御所</td></tr>
+    <tr><td class="account">ぐっち夫婦</td><td class="followers">約72万人</td><td>夫婦で発信する家庭料理レシピ</td></tr>
+    <tr><td class="account">栄養士のれしぴ @eiyoushino_recipe</td><td class="followers">約57.5万人</td><td>栄養バランス重視のレシピ</td></tr>
+  </tbody>
+</table>
+
+<h2>注目の海外クリエイター</h2>
+<table>
+  <thead>
+    <tr><th>アカウント</th><th>フォロワー</th><th>特徴</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="account">CZN Burak @cznburak</td><td class="followers">約5,300万人</td><td>巨大ポーション×笑顔。トルコ/中東料理</td></tr>
+    <tr><td class="account">Amaury Guichon @amauryguichon</td><td class="followers">約1,830万人</td><td>チョコレートアート・パティスリーの映像美</td></tr>
+    <tr><td class="account">Gordon Ramsay @gordongram</td><td class="followers">約1,710万人</td><td>料理批評・tips・裏側コンテンツ</td></tr>
+    <tr><td class="account">Half Baked Harvest @halfbakedharvest</td><td class="followers">約550万人</td><td>コンフォートフード。写真映え抜群</td></tr>
+    <tr><td class="account">The Pasta Queen @the_pastaqueen</td><td class="followers">約510万人</td><td>イタリアンパスタ専門。ストーリーテリング型</td></tr>
+    <tr><td class="account">Feel Good Foodie @feelgoodfoodie</td><td class="followers">約450万人</td><td>地中海風ヘルシーレシピ</td></tr>
+    <tr><td class="account">Nick DiGiovanni @nickdigiovanni</td><td class="followers">約400万人</td><td>料理チャレンジ・ギネス記録挑戦</td></tr>
+    <tr><td class="account">Pinch of Yum @pinchofyum</td><td class="followers">—</td><td>日常のフレッシュレシピ</td></tr>
+    <tr><td class="account">Chef Lennard @lennardy</td><td class="followers">—</td><td>アジアンフレーバー×洗練技法（シンガポール拠点）</td></tr>
+  </tbody>
+</table>
+
+<h2>2026年のInstagramトレンド</h2>
+<div class="trend-tags">
+  <span class="tag">高タンパク・腸活</span>
+  <span class="tag">コテージチーズ</span>
+  <span class="tag">エアフライヤー</span>
+  <span class="tag">ブロッコリー</span>
+  <span class="tag">キャベツ復権</span>
+  <span class="tag">サーモンボウル</span>
+  <span class="tag">甘じょっぱいデザート</span>
+  <span class="tag">おうちカフェ</span>
+  <span class="tag">時短・節約</span>
+  <span class="tag">発酵食品</span>
+</div>
+
+<h2>バズるリールの傾向</h2>
+<table>
+  <thead>
+    <tr><th>項目</th><th>2026年の傾向</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="recipe-name">最適な長さ</td><td>15〜30秒</td></tr>
+    <tr><td class="recipe-name">評価基準</td><td>3秒維持率（スクロール停止）・保存数・シェア数（DM送信）</td></tr>
+    <tr><td class="recipe-name">投稿頻度</td><td>週3〜5本が最適</td></tr>
+    <tr><td class="recipe-name">コンテンツの方向</td><td>完璧さより共感・親近感。「ASMR調理音」「ビフォーアフター」が強い</td></tr>
+    <tr><td class="recipe-name">日本の傾向</td><td>「一汁三菜ボウル」「時短」「節約」が3大キーワード</td></tr>
+  </tbody>
+</table>
+
+<div class="note">
+  <strong>注意:</strong> Instagramは再生回数・いいね数を外部から網羅的に取得できないため、上記はすべて各メディアで「viral / trending」として紹介されたものです。個別の正確な数値はInstagramアプリ内で直接ご確認ください。
+</div>
+
+</div>
+
+</div>
+
+<script>
+function switchTab(platform) {
+  document.getElementById('section-tiktok').classList.remove('active');
+  document.getElementById('section-ig').classList.remove('active');
+  document.getElementById('btn-tiktok').className = 'platform-btn';
+  document.getElementById('btn-ig').className = 'platform-btn';
+
+  if (platform === 'tiktok') {
+    document.getElementById('section-tiktok').classList.add('active');
+    document.getElementById('btn-tiktok').classList.add('active-tiktok');
+  } else {
+    document.getElementById('section-ig').classList.add('active');
+    document.getElementById('btn-ig').classList.add('active-ig');
+  }
+}
+</script>
 </body>
 </html>
